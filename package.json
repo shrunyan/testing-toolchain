@@ -6,9 +6,23 @@
   "scripts": {
     "test": "node_modules/.bin/tape tests/*.js | node_modules/.bin/faucet"
   },
+  "testling": {
+    "files": "bundle.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
   "author": "stuart runyan",
   "license": "ISC",
   "dependencies": {
+    "babelify": "^6.0.2",
     "browserify": "^9.0.8",
     "faucet": "0.0.1",
     "tap": "^0.7.1",

@@ -6,6 +6,11 @@ __Playing around with testing tool chain__
 - @see http://www.macwright.org/2014/03/11/tape-is-cool.html
 - @see https://ci.testling.com/guide/tape
 
+## Building Dist
+
+`$ mkdir dist`
+`$ node_modules/.bin/browserify -t babelify tests/*.js > dist/bundle.js`
+
 ## Running Tests
 
 You can run these tests with out globally installed packages by referencing the CLI tools in `node_modules/.bin/`
