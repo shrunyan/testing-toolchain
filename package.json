@@ -1,0 +1,18 @@
+{
+  "name": "testing-toolchain",
+  "version": "1.0.0",
+  "description": "Experimentation with testing toolchain for javascript modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/tape tests/*.js | node_modules/.bin/faucet"
+  },
+  "author": "stuart runyan",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^9.0.8",
+    "faucet": "0.0.1",
+    "tap": "^0.7.1",
+    "tape": "^4.0.0",
+    "testling": "^1.7.1"
+  }
+}
