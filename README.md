@@ -22,3 +22,10 @@ You can run these tests with out globally installed packages by referencing the 
 // @TODO I'm writing ES6 syntax, need to transpile to test in browser with testling
 
 Testling: ``
+
+
+## Code Coverage
+
+Using `coverify` we can check for code coverage.
+
+`$npm run coverage`

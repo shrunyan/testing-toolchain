@@ -1,7 +1,7 @@
 'use strict'
 
 let test = require('tape')
-let myModule = require('../src/myModule')
+let myModule = require('../../src/myModule')
 
 test('myModule', function (t) {
 	

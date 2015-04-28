@@ -4,7 +4,10 @@
   "description": "Experimentation with testing toolchain for javascript modules",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/tape tests/*.js | node_modules/.bin/faucet"
+    "build": "node_modules/.bin/browserify -t babelify src/*.js > dist/bundle.js",
+    "build-tests": "node_modules/.bin/browserify -t babelify tests/**/*.js > dist/test_bundle.js",
+    "coverage": "node_modules/.bin/browserify -t [babelify coverify] tests/**/*.js | iojs | node_modules/.bin/coverify",
+    "test": "node_modules/.bin/tape tests/**/*.js | node_modules/.bin/faucet"
   },
   "testling": {
     "files": "bundle.js",
@@ -24,6 +27,7 @@
   "dependencies": {
     "babelify": "^6.0.2",
     "browserify": "^9.0.8",
+    "coverify": "^1.1.0",
     "faucet": "0.0.1",
     "tap": "^0.7.1",
     "tape": "^4.0.0",
